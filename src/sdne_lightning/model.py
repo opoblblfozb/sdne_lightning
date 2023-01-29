@@ -35,7 +35,9 @@ class SDNE(pl.LightningModule):
             sum([val["loss"] for val in train_step_outputs]) / step_num
         )
 
-        self.log("train_loss", epoch_loss, prog_bar=True, on_epoch=True)
+        self.log(
+            "train_loss", epoch_loss, prog_bar=True, on_epoch=True, logger=True
+        )
 
         print(
             "-------- Current Epoch {} --------".format(self.current_epoch + 1)

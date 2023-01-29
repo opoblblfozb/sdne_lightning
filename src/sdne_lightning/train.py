@@ -3,10 +3,11 @@ from sdne_lightning.data import NetworkData
 from sdne_lightning.util import read_tsv_as_int_list
 
 import pytorch_lightning as pl
+from pytorch_lightning.loggers import TensorBoardLogger
 
 
 def prepare_trainer():
-    return pl.Trainer(max_epochs=1000)
+    return pl.Trainer(max_epochs=500, logger=TensorBoardLogger("./logs"))
 
 
 def train_sdne(input_graph, model_path):

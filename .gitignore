@@ -2,3 +2,5 @@ __pycache__
 .pytest_cache
 
 dist/
+lightning_logs/
+poetry.lock
