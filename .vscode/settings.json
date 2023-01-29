@@ -1,0 +1,20 @@
+{
+	"python.pythonPath": ".venv/bin/python",
+	"python.formatting.provider": "black",
+	"python.formatting.blackArgs": [
+		"--line-length",
+		"79"
+	],
+	"python.linting.flake8Enabled": true,
+	"python.linting.pylintEnabled": false,
+	"[python]": {
+		"editor.formatOnSave": true,
+		"editor.codeActionsOnSave": [
+			"source.fixAll"
+		]
+	},
+	"files.associations": {
+		"*.spec": "gauge",
+		"*.cpt": "gauge"
+	}
+}
