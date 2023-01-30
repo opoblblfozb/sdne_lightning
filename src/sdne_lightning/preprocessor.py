@@ -4,7 +4,7 @@ from torch.utils.data import DataLoader, Dataset
 import torch
 
 
-class NetworkData:
+class Preprocessor:
     def __init__(self, edge: Iterable[Sequence]):
         self.edge = edge
 
@@ -50,7 +50,7 @@ class NetworkDataTorchDataset(Dataset):
         return adj_matrix
 
     def __getitem__(self, index: int):
-        return self.adj_matrix[index]
+        return self.adj_matrix[index], index
 
     def __len__(self) -> int:
         return self.adj_matrix.shape[0]
